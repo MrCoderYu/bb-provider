@@ -34,6 +34,7 @@ public class GrpcRouter {
                     @Override
                     public void onSuccess(@Nullable TestReply result) {
                         responseObserver.onNext(result);
+                        responseObserver.onCompleted();
                     }
 
                     @Override
